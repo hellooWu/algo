@@ -27,7 +27,15 @@ package algo;
 public class LengthOfLongestSubstring {
 
     public int lengthOfLongestSubstring(String s) {
-        return -1;
+        char[] chars = s.toCharArray();
+        int left = 0, max = 0;
+        int[] m = new int[256];
+        for (int i = 0; i < chars.length; i++) {
+            left = Math.max(left, m[chars[i]]);
+            max = Math.max(max, i - left + 1);
+            m[chars[i]] = i + 1;
+        }
+        return max;
     }
 
 
