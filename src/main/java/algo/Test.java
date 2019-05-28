@@ -2,6 +2,9 @@ package algo;
 
 import basic.Node;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 import static algo.JudgeCycle.hasCycle;
 import static algo.ReverseList.reverse;
 
@@ -12,8 +15,9 @@ public class Test {
 
     public static void main(String[] args) {
 
-        So so = new So();
-        so.a(new Node(1));
+        int[] a = new SearchRange().searchRange(new int[]{0}, 1);
+
+        System.out.println(Arrays.toString(a));
 
     }
 
